@@ -1601,7 +1601,7 @@ function App() {
             </div>
             <Carousel
                 autoplay={!pause}
-                autoplaySpeed={1000}
+                autoplaySpeed={20000}
                 effect='fade'
                 infinite={true}
                 dotPosition={'top'}

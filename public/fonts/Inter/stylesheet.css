@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./Inter-VariableFont_slnt,wght.ttf') format("truetype-variations");
+}
+
+.Inter-font {
+    font-variation-settings: 'wght' 375, 'slnt' 88;
+}
+

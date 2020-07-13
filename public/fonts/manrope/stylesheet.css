@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('./Manrope-VariableFont_wght.ttf') format("truetype-variations");
+}
+
+.Manrope-font {
+    font-variation-settings: 'wght' 375, 'slnt' 88;
+}
+

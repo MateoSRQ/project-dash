@@ -207,16 +207,26 @@ function App() {
         let elem_1: LayoutElement;
         let _layouts: Layout;
         _layouts = {...layouts};
+        console.log(id);
+        console.log(_layouts)
         let index = _.findIndex(_layouts.page1, {i: id});
+        console.log(index)
         if (_layouts.page1[index]) {
+            console.log('page 1')
+            console.log(_layouts.page1[index])
             _layouts.page1[index].static = !_layouts.page1[index].static
             _layouts.page1[index].isDraggable = !_layouts.page1[index].static
+            console.log(_layouts.page1[index])
 
         }
         index = _.findIndex(_layouts.page2, {i: id});
+        console.log(index)
         if (_layouts.page2[index]) {
+            console.log('page 2')
+            console.log(_layouts.page2[index])
             _layouts.page2[index].static = !_layouts.page2[index].static
             _layouts.page2[index].isDraggable = !_layouts.page2[index].static
+            console.log(_layouts.page2[index])
         }
         _setLayouts(_layouts)
     }
@@ -836,11 +846,6 @@ function App() {
                         </div>
                     )
                 case 'worldmap':
-                    console.log('worldmap')
-                    console.log(item)
-                    console.log(props)
-                    console.log(type)
-                    console.log(i)
                     if (item.static) {
                         lockIcon = <UnlockOutlined style={{fontSize: 16}}/>
                     }
@@ -1579,14 +1584,14 @@ function App() {
             </Menu.Item>
         </Menu>
     );
-    // let page1 = layouts.page1.map((item: any) => {
-    //     const {type, ..._item} = item;
-    //     return _item;
-    // });
-    // let page2 = layouts.page2.map((item: any) => {
-    //     const {type, ..._item} = item;
-    //     return _item;
-    // });
+    let page1 = layouts.page1.map((item: any) => {
+        const {type, ..._item} = item;
+        return _item;
+    });
+    let page2 = layouts.page2.map((item: any) => {
+        const {type, ..._item} = item;
+        return _item;
+    });
     return (
         <div className={styles.app}>
             <div className={styles.titleBar}>
@@ -1616,7 +1621,7 @@ function App() {
                                 className={["layout", styles.layout].join(' ')}
                                 cols={{lg: 20, md: 20}}
                                 margin={[6, 6]}
-                                //layouts={{lg: page1, md: page1}}
+                                layouts={{lg: page1, md: page1}}
                                 containerPadding={[3, 3]}
                                 breakpoints={{lg: 1920, md: 1080}}
                                 rowHeight={20}
@@ -1635,7 +1640,7 @@ function App() {
                                 className={["layout", styles.layout].join(' ')}
                                 cols={{lg: 20, md: 20}}
                                 margin={[6, 6]}
-                                //layouts={{lg: page2, md: page2}}
+                                layouts={{lg: page2, md: page2}}
                                 containerPadding={[3, 3]}
                                 breakpoints={{lg: 1920, md: 1080}}
                                 rowHeight={20}

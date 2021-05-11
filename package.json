@@ -20,7 +20,7 @@
     "echarts": "^4.8.0",
     "echarts-for-react": "^2.0.16",
     "globe.gl": "^2.11.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-globe.gl": "^2.8.3",
